@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-.flex {
+.rw , .flex {
     --fd: row;
     flex-direction: var(--fd);
     --jc: flex-start;
@@ -15,6 +15,7 @@
     align-items: var(--ai);
 }
 
+    .rw > *,
     .flex > * {
     }
 
