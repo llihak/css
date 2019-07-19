@@ -1,0 +1,102 @@
+.rw, .flex, .grid {
+  display: flex;
+  flex-wrap: wrap; }
+
+.rw, .flex {
+  --fd: row;
+  flex-direction: var(--fd);
+  --jc: stretch;
+  justify-content: var(--jc);
+  --ai: initial;
+  align-items: var(---ai); }
+
+.rw > *,
+.flex > * {
+  /* flex children */ }
+
+.grid,
+.rw {
+  display: grid;
+  --gtcx: 320px;
+  --gtc: repeat(auto-fit, minmax(var(--gtcx), 1fr));
+  grid-template-columns: var(--gtc);
+  --gg: 2vw;
+  grid-gap: var(--gg);
+  grid-auto-flow: dense;
+  --gce: span 1;
+  --gre: span 1;
+  --gx: 1;
+  --grx: 1;
+  --gcx: 1; }
+
+.grid > *,
+.rw > * {
+  flex: 1 1 var(--gtcx);
+  grid-column-end: var(--gce);
+  grid-row-end: var(--gre); }
+
+.grid > .full, .rw > .full,
+.grid > .hd, .rw > .hd,
+.grid > .ft, .rw > .ft,
+.grid > h1, .rw > h1, h1.cl,
+.grid > h2, .rw > h2, h2.cl,
+.grid > h3, .rw > h3, h3.cl,
+.grid > h4, .rw > h4, h4.cl,
+.grid > h5, .rw > h5, h5.cl,
+.grid > h6, .rw > h6, h6.cl {
+  flex: 0 0 100%;
+  grid-column: 1 / -1; }
+
+@media (min-width: 825px) {
+  .gx {
+    --gtc: repeat(var(--gx), [col] 1fr); }
+  .g2 {
+    --gtc: repeat(2, [col] 1fr); }
+  .g3 {
+    --gtc: repeat(3, [col] 1fr); }
+  .g4 {
+    --gtc: repeat(4, [col] 1fr); }
+  .g5 {
+    --gtc: repeat(5, [col] 1fr); }
+  .g6 {
+    --gtc: repeat(6, [col] 1fr); }
+  .g12 {
+    --gtc: repeat(12, [col] 1fr); }
+  /* row span */
+  .grid > .rx, .rw > .rx {
+    --gre: span var(--grx, 1); }
+  .grid > .r1, .rw > .r1 {
+    --gre: span 1; }
+  .grid > .r2, .rw > .r2 {
+    --gre: span 2; }
+  .grid > .r3, .rw > .r3 {
+    --gre: span 3; }
+  .grid > .r4, .rw > .r4 {
+    --gre: span 4; }
+  .grid > .r5, .rw > .r5 {
+    --gre: span 5; }
+  /* column span */
+  .grid > .cx, .rw > .cx {
+    flex: var(--gcx);
+    --gce: span var(--gcx, 1); }
+  .grid > .c1, .rw > .c1 {
+    flex: 1;
+    --gce: span 1; }
+  .grid > .c2, .rw > .c2 {
+    flex: 2;
+    --gce: span 2; }
+  .grid > .c3, .rw > .c3 {
+    flex: 3;
+    --gce: span 3; }
+  .grid > .c4, .rw > .c4 {
+    flex: 4;
+    --gce: span 4; }
+  .grid > .c5, .rw > .c5 {
+    flex: 5;
+    --gce: span 5; }
+  .grid > .c6, .rw > .c6 {
+    flex: 6;
+    --gce: span 6; }
+  .grid > .c7, .rw > .c8 {
+    flex: 8;
+    --gce: span 8; } }
