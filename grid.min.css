@@ -1170,15 +1170,15 @@ footer .chat > div {
 }
 
 .flex {
-    --jc: initial;
+    --fd: row;
+    flex-direction: var(--fd);
+    --jc: flex-start;
     justify-content: var(--jc);
-    --ai: initial;
+    --ai: stretch;
     align-items: var(---ai);
 }
 
     .flex > * {
-        --fd: initial;
-        flex-direction: var(--fd);
     }
 
 .grid,
