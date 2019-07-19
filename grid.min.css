@@ -1175,7 +1175,7 @@ footer .chat > div {
     --jc: flex-start;
     justify-content: var(--jc);
     --ai: stretch;
-    align-items: var(---ai);
+    align-items: var(--ai);
 }
 
     .flex > * {
